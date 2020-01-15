@@ -28,6 +28,7 @@
     "ember-cli-babel": "^7.13.0",
     "ember-cli-dependency-checker": "^3.2.0",
     "ember-cli-eslint": "^5.1.0",
+    "ember-cli-fastboot": "^2.2.1",
     "ember-cli-htmlbars": "^4.2.0",
     "ember-cli-inject-live-reload": "^2.0.1",
     "ember-cli-sri": "^2.1.1",
@@ -52,5 +53,9 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "prismic-dom": "^2.1.0",
+    "prismic-javascript": "^2.1.5"
   }
 }

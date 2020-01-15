@@ -20,7 +20,18 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    fastboot: {
+      hostWhitelist: ['https://another-test-with-dynamic-content.prismic.io', 'another-test-with-dynamic-content.prismic.io','prismic.io', /^localhost:\d+$/]
     }
+  };
+
+  ENV.contentSecurityPolicy = {
+    'script-src': ["'self'", "https://another-test-with-dynamic-content.prismic.io"],
+    'connect-src': ["'self'", "localhost:4200", "https://another-test-with-dynamic-content.prismic.io"],
+    'img-src': ["'self'"],
+    'style-src': ["'self' 'unsafe-inline'"],
   };
 
   if (environment === 'development') {
